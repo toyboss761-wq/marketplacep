@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectroMarket - Аксессуары</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f4f4f9; color: #333; }
+    header {
+      background: #0d1b2a; color: #fff; padding: 15px 50px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header h1 { font-size: 1.6rem; letter-spacing: 1px; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav a { color: #fff; text-decoration: none; transition: 0.3s; }
+    nav a:hover { color: #00b4d8; }
+    .hero {
+      background: url('https://i.ytimg.com/vi/E7tmRDYEEjY/maxresdefault.jpg') center/cover;
+      height: 300px; display: flex; justify-content: center; align-items: center;
+      color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-size: 2rem; font-weight: bold; text-align: center;
+    }
+    .accessories-container {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px; padding: 50px;
+    }
+    .accessory-card {
+      background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden; cursor: pointer; display: flex; flex-direction: column;
+    }
+    .accessory-card:hover {
+      transform: translateY(-10px); box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .accessory-card img { width: 100%; height: 200px; object-fit: cover; }
+    .accessory-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .accessory-name { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; color: #222; }
+    .price { color: #00b4d8; font-weight: bold; margin-bottom: 10px; }
+    details summary { cursor: pointer; font-weight: bold; margin-bottom: 5px; list-style: none; }
+    details p { margin: 5px 0; font-size: 0.95rem; color: #555; }
+    footer { background: #0d1b2a; color: #ccc; text-align: center; padding: 30px; font-size: 0.9rem; }
+    @media (max-width: 600px) {
+      header { flex-direction: column; text-align: center; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      .hero { font-size: 1.5rem; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ElectroMarket</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="#">Аксессуары</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li><a href="#">О нас</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  Стильные аксессуары для вашей электроники 🎧
+</div>
+
+<section class="accessories-container">
+
+  
+  <div class="accessory-card">
+    <img src="https://avatars.mds.yandex.net/i?id=d589ef2406d9bc7abebcba53da7bbf1914db7997-5879161-images-thumbs&n=13" alt="Sony WH-1000XM4">
+    <div class="accessory-info">
+      <div class="accessory-name">Sony WH-1000XM4</div>
+      <div class="price">25 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Тип: Наушники с шумоподавлением</p>
+        <p>Подключение: Bluetooth 5.0</p>
+        <p>Время работы: до 30 часов</p>
+        <p>Цвет: Черный</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Клавиатура Logitech MX Keys -->
+  <div class="accessory-card">
+    <img src="https://avatars.mds.yandex.net/get-mpic/5094021/2a000001928ff04bc46791614027d42d1e14/orig" alt="Logitech MX Keys">
+    <div class="accessory-info">
+      <div class="accessory-name">Logitech MX Keys</div>
+      <div class="price">12 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Тип: Беспроводная клавиатура</p>
+        <p>Подключение: Bluetooth/USB</p>
+        <p>Подсветка клавиш: Да</p>
+        <p>Цвет: Графит</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Мышь Logitech MX Master 3 -->
+  <div class="accessory-card">
+    <img src="https://avatars.mds.yandex.net/get-mpic/11935191/2a00000193300970a2eb8d7b2cd89f7f8fe6/orig" alt="Logitech MX Master 3">
+    <div class="accessory-info">
+      <div class="accessory-name">Logitech MX Master 3</div>
+      <div class="price">8 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Тип: Беспроводная мышь</p>
+        <p>Подключение: Bluetooth/USB</p>
+        <p>Эргономика: Да</p>
+        <p>Цвет: Черный</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Повербанк Xiaomi 20000mAh -->
+  <div class="accessory-card">
+    <img src="https://avatars.mds.yandex.net/i?id=1d10f6b1b37532389b7aa12e5b9a981ca518eae0-12374505-images-thumbs&n=13" alt="Xiaomi Powerbank 20000mAh">
+    <div class="accessory-info">
+      <div class="accessory-name">Xiaomi Powerbank 20000mAh</div>
+      <div class="price">3 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Емкость: 20000 mAh</p>
+        <p>Выходы: 2x USB-A, 1x USB-C</p>
+        <p>Совместимость: Все устройства</p>
+        <p>Цвет: Черный</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Чехол для iPhone 15 -->
+  <div class="accessory-card">
+    <img src="https://avatars.mds.yandex.net/i?id=2de710cf7daf816094f60cdda164991f_l-10414816-images-thumbs&n=13" alt="Чехол iPhone 15">
+    <div class="accessory-info">
+      <div class="accessory-name">Чехол для iPhone 15</div>
+      <div class="price">1 200 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Материал: Силикон</p>
+        <p>Совместимость: iPhone 15</p>
+        <p>Защита: Ударопрочный</p>
+        <p>Цвет: Прозрачный</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Наушники Apple AirPods Pro -->
+  <div class="accessory-card">
+    <img src="https://avatars.mds.yandex.net/get-mpic/5031100/2a00000191b257e31fdae412bee0983b2926/orig" alt="Apple AirPods Pro">
+    <div class="accessory-info">
+      <div class="accessory-name">Apple AirPods Pro</div>
+      <div class="price">18 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Тип: Вкладыши с шумоподавлением</p>
+        <p>Подключение: Bluetooth</p>
+        <p>Время работы: до 24 часов с кейсом</p>
+        <p>Цвет: Белый</p>
+      </details>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 ElectroMarket. Все права защищены.
+</footer>
+
+</body>
+</html>

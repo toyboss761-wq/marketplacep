@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectroMarket - ПК</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f4f4f9; color: #333; }
+    header {
+      background: #0d1b2a; color: #fff; padding: 15px 50px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header h1 { font-size: 1.6rem; letter-spacing: 1px; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav a { color: #fff; text-decoration: none; transition: 0.3s; }
+    nav a:hover { color: #00b4d8; }
+    .hero {
+      background: url('https://region-tyumen.ru/upload/iblock/d1e/kizoy5hz0vt78q13w8cekcu2eo7v182f.jpeg') center/cover;
+      height: 300px; display: flex; justify-content: center; align-items: center;
+      color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-size: 2rem; font-weight: bold; text-align: center;
+    }
+    .computers-container {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px; padding: 50px;
+    }
+    .computer-card {
+      background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden; cursor: pointer; display: flex; flex-direction: column;
+    }
+    .computer-card:hover {
+      transform: translateY(-10px); box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .computer-card img { width: 100%; height: 200px; object-fit: cover; }
+    .computer-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .computer-name { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; color: #222; }
+    .price { color: #00b4d8; font-weight: bold; margin-bottom: 10px; }
+    details summary { cursor: pointer; font-weight: bold; margin-bottom: 5px; list-style: none; }
+    details p { margin: 5px 0; font-size: 0.95rem; color: #555; }
+    footer { background: #0d1b2a; color: #ccc; text-align: center; padding: 30px; font-size: 0.9rem; }
+    @media (max-width: 600px) {
+      header { flex-direction: column; text-align: center; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      .hero { font-size: 1.5rem; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ElectroMarket</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="#">ПК</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li><a href="#">О нас</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  Мощные настольные компьютеры 💻
+</div>
+
+<section class="computers-container">
+
+  <div class="computer-card">
+    <img src="https://avatars.mds.yandex.net/i?id=a541cfb9cc5ee25e536cfb00f03701ce8b5b3a03-5101755-images-thumbs&n=13" alt="Alienware Aurora R13">
+    <div class="computer-info">
+      <div class="computer-name">Alienware Aurora R13</div>
+      <div class="price">220 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: Intel Core i9</p>
+        <p>ОЗУ: 32 ГБ</p>
+        <p>Видеокарта: RTX 3080 10GB</p>
+        <p>Хранилище: 1 ТБ SSD</p>
+        <p>ОС: Windows 11</p>
+      </details>
+    </div>
+  </div>
+
+  
+  <div class="computer-card">
+    <img src="https://avatars.mds.yandex.net/i?id=bca39ab0338c7a9cee2bff565b68c4d44e691363-5478197-images-thumbs&ref=rim&n=33&w=334&h=250" alt="HP Omen 30L">
+    <div class="computer-info">
+      <div class="computer-name">HP Omen 30L</div>
+      <div class="price">200 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: Intel Core i7</p>
+        <p>ОЗУ: 16 ГБ</p>
+        <p>Видеокарта: RTX 3070 8GB</p>
+        <p>Хранилище: 512 ГБ SSD + 1 ТБ HDD</p>
+        <p>ОС: Windows 11</p>
+      </details>
+    </div>
+  </div>
+
+ 
+  <div class="computer-card">
+    <img src="https://digitik.ru/upload/iblock/f97/f979faeb17f3d5181619e169486aef09.jpg" alt="ASUS ROG Strix GA35">
+    <div class="computer-info">
+      <div class="computer-name">ASUS ROG Strix GA35</div>
+      <div class="price">250 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: AMD Ryzen 9</p>
+        <p>ОЗУ: 32 ГБ</p>
+        <p>Видеокарта: RTX 3080 10GB</p>
+        <p>Хранилище: 1 ТБ SSD</p>
+        <p>ОС: Windows 11</p>
+      </details>
+    </div>
+  </div>
+
+  
+  <div class="computer-card">
+    <img src="https://avatars.mds.yandex.net/i?id=fa4dd3e5567862e46669ad79907951426f2c374a-10812837-images-thumbs&n=13" alt="Lenovo Legion T7">
+    <div class="computer-info">
+      <div class="computer-name">Lenovo Legion T7</div>
+      <div class="price">190 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: Intel Core i7</p>
+        <p>ОЗУ: 16 ГБ</p>
+        <p>Видеокарта: RTX 3060 12GB</p>
+        <p>Хранилище: 512 ГБ SSD</p>
+        <p>ОС: Windows 11</p>
+      </details>
+    </div>
+  </div>
+
+  
+  <div class="computer-card">
+    <img src="https://avatars.mds.yandex.net/i?id=2401ac931a0aa5aba172fe25159d09a077f593f5-11449045-images-thumbs&n=13" alt="MSI MEG Trident X">
+    <div class="computer-info">
+      <div class="computer-name">MSI MEG Trident X</div>
+      <div class="price">230 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: Intel Core i9</p>
+        <p>ОЗУ: 32 ГБ</p>
+        <p>Видеокарта: RTX 3080 10GB</p>
+        <p>Хранилище: 1 ТБ SSD</p>
+        <p>ОС: Windows 11</p>
+      </details>
+    </div>
+  </div>
+
+  
+  <div class="computer-card">
+    <img src="https://www.mmohelper.ru/wp-content/uploads/2019/12/dzhoker-joker-khoakin-feniks-joaquin-phoenix-litso-grim-cher-81.jpg" alt="Corsair One i300">
+    <div class="computer-info">
+      <div class="computer-name">Corsair One i300</div>
+      <div class="price">270 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: Intel Core i9</p>
+        <p>ОЗУ: 32 ГБ</p>
+        <p>Видеокарта: RTX 3090 24GB</p>
+        <p>Хранилище: 2 ТБ SSD</p>
+        <p>ОС: Windows 11</p>
+      </details>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 ElectroMarket. Все права защищены.
+</footer>
+
+</body>
+</html>

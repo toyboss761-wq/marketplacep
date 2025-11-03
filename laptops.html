@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectroMarket - Ноутбуки</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f4f4f9; color: #333; }
+    header {
+      background: #0d1b2a; color: #fff; padding: 15px 50px;
+      display: flex; justify-content: space-between; align-items: center;
+      position: sticky; top: 0; z-index: 10;
+    }
+    header h1 { font-size: 1.6rem; letter-spacing: 1px; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav a { color: #fff; text-decoration: none; transition: 0.3s; }
+    nav a:hover { color: #00b4d8; }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1200&q=80') center/cover;
+      height: 300px; display: flex; justify-content: center; align-items: center;
+      color: white; text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+      font-size: 2rem; font-weight: bold; text-align: center;
+    }
+    .laptops-container {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px; padding: 50px;
+    }
+    .laptop-card {
+      background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden; cursor: pointer; display: flex; flex-direction: column;
+    }
+    .laptop-card:hover {
+      transform: translateY(-10px); box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .laptop-card img { width: 100%; height: 200px; object-fit: cover; }
+    .laptop-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .laptop-name { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; color: #222; }
+    .price { color: #00b4d8; font-weight: bold; margin-bottom: 10px; }
+    details summary { cursor: pointer; font-weight: bold; margin-bottom: 5px; list-style: none; }
+    details p { margin: 5px 0; font-size: 0.95rem; color: #555; }
+    footer { background: #0d1b2a; color: #ccc; text-align: center; padding: 30px; font-size: 0.9rem; }
+    @media (max-width: 600px) {
+      header { flex-direction: column; text-align: center; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+      .hero { font-size: 1.5rem; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ElectroMarket</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="#">Ноутбуки</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li><a href="#">О нас</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="hero">
+  Мощные и современные ноутбуки 💻
+</div>
+
+<section class="laptops-container">
+
+  <!-- MacBook Pro 16" -->
+  <div class="laptop-card">
+    <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/mbp16-spacegray-select-202110?wid=600&hei=600&fmt=jpeg&qlt=95&.v=1632788573000" alt="MacBook Pro 16">
+    <div class="laptop-info">
+      <div class="laptop-name">MacBook Pro 16"</div>
+      <div class="price">250 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: M1 Pro</p>
+        <p>ОЗУ: 16 ГБ</p>
+        <p>Память: 512 ГБ SSD</p>
+        <p>Экран: 16" Retina</p>
+        <p>Батарея: до 21 часа</p>
+      </details>
+    </div>
+  </div>
+
+  
+  <div class="laptop-card">
+    <img src="https://cdn.alza.cz/Foto/LegendFoto/photos/ADC825k52m0_2.jpg" alt="Dell XPS 13">
+    <div class="laptop-info">
+      <div class="laptop-name">Dell XPS 13</div>
+      <div class="price">120 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: Intel Core i7</p>
+        <p>ОЗУ: 16 ГБ</p>
+        <p>Память: 512 ГБ SSD</p>
+        <p>Экран: 13.3" Full HD</p>
+        <p>Батарея: до 12 часов</p>
+      </details>
+    </div>
+  </div>
+
+ 
+  <div class="laptop-card">
+    <img src="https://50.img.avito.st/image/1/1.uPYQ9ra4FB8mX9YabPCVuzRUFhmuV5YXZlIWHaBfHBWm.64KfE0PDoueKPLCbYCPt3BZqf1_aYZPyYz79KAEZNyU" alt="HP Spectre x360">
+    <div class="laptop-info">
+      <div class="laptop-name">HP Spectre x360</div>
+      <div class="price">130 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: Intel Core i7</p>
+        <p>ОЗУ: 16 ГБ</p>
+        <p>Память: 1 ТБ SSD</p>
+        <p>Экран: 13.5" 4K OLED</p>
+        <p>Батарея: до 14 часов</p>
+      </details>
+    </div>
+  </div>
+
+  
+  <div class="laptop-card">
+    <img src="https://avatars.mds.yandex.net/i?id=598e73981b85e047285aa2eee4c2f45ef2c45276-12805492-images-thumbs&n=13" alt="Lenovo ThinkPad X1">
+    <div class="laptop-info">
+      <div class="laptop-name">Lenovo ThinkPad X1</div>
+      <div class="price">140 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: Intel Core i7</p>
+        <p>ОЗУ: 16 ГБ</p>
+        <p>Память: 512 ГБ SSD</p>
+        <p>Экран: 14" Full HD</p>
+        <p>Батарея: до 15 часов</p>
+      </details>
+    </div>
+  </div>
+
+  
+  <div class="laptop-card">
+    <img src="https://avatars.mds.yandex.net/i?id=0a6a9446b69b78045c2fd55551f01572_l-5865828-images-thumbs&n=13" alt="Asus ROG Zephyrus G14">
+    <div class="laptop-info">
+      <div class="laptop-name">Asus ROG Zephyrus G14</div>
+      <div class="price">160 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: AMD Ryzen 9</p>
+        <p>ОЗУ: 16 ГБ</p>
+        <p>Память: 1 ТБ SSD</p>
+        <p>Экран: 14" QHD 120Hz</p>
+        <p>Батарея: до 10 часов</p>
+      </details>
+    </div>
+  </div>
+
+  
+  <div class="laptop-card">
+    <img src="https://avatars.mds.yandex.net/i?id=cbc329a316732c4fea96593aa07c1504280c899f6dc66427-5714596-images-thumbs&n=13" alt="Acer Predator Helios 300">
+    <div class="laptop-info">
+      <div class="laptop-name">Acer Predator Helios 300</div>
+      <div class="price">150 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: Intel Core i7</p>
+        <p>ОЗУ: 16 ГБ</p>
+        <p>Память: 512 ГБ SSD</p>
+        <p>Экран: 15.6" FHD 144Hz</p>
+        <p>Батарея: до 7 часов</p>
+      </details>
+    </div>
+  </div>
+
+  
+  <div class="laptop-card">
+    <img src="https://avatars.mds.yandex.net/i?id=697e6fcd8a3b416339b096d18e417eb956b398af-5281109-images-thumbs&n=13" alt="MSI GE76 Raider">
+    <div class="laptop-info">
+      <div class="laptop-name">MSI GE76 Raider</div>
+      <div class="price">280 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: Intel Core i9</p>
+        <p>ОЗУ: 32 ГБ</p>
+        <p>Память: 1 ТБ SSD</p>
+        <p>Экран: 17.3" FHD 360Hz</p>
+        <p>Батарея: до 5 часов</p>
+      </details>
+    </div>
+  </div>
+
+  <!-- Razer Blade 15 -->
+  <div class="laptop-card">
+    <img src="https://avatars.mds.yandex.net/i?id=7b9b8a970989574898cda77384326c7d03da371c-5235444-images-thumbs&n=13" alt="Razer Blade 15">
+    <div class="laptop-info">
+      <div class="laptop-name">Razer Blade 15</div>
+      <div class="price">270 000 ₽</div>
+      <details>
+        <summary>Характеристики</summary>
+        <p>Процессор: Intel Core i7</p>
+        <p>ОЗУ: 32 ГБ</p>
+        <p>Память: 1 ТБ SSD</p>
+        <p>Экран: 15.6" QHD 165Hz</p>
+        <p>Батарея: до 6 часов</p>
+      </details>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 ElectroMarket. Все права защищены.
+</footer>
+
+</body>
+</html>
