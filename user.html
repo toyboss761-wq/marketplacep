@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroMarket</title>
+</head>
+
+<body>
+    <header>
+    <h1>ElectroMarket</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="#">Категории</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">О нас</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div class="main">
+        <div class="reg">
+
+        <h1>Регистрация</h1>
+        <label for="email" class="text">E-mail:</label>
+        <input type="email" placeholder="Введите e-mail">
+        <label for="number" class="text">Пароль</label>
+        <input type="password" placeholder="Введите пароль">
+        <button class="exit">Вход</button>
+        </div>
+    </div>
+    <footer>
+    © 2025 ElectroMarket. Все права защищены.
+  </footer>
+</body>
+<style>
+    body {
+      background-image: url(https://mfd-darfest.ru/wp-content/uploads/2024/08/213.jpg);
+    }
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        height: 400px;
+        
+        margin:0 auto;
+        margin-top: 150px;
+        border-radius: 20px;
+        background-color: rgb(190, 184, 184,.2)
+        
+        
+    }
+    footer {
+      background: #0d1b2a;
+      color: #ccc;
+      text-align: center;
+      margin-top: 140px;
+      padding: 40px;
+      font-size: 0.9rem;
+    }
+    .reg {
+        display: grid;
+        
+    }
+    .text {
+        font-size: 25px;
+        color:white;
+    }
+    .exit {
+        margin-top: 10px;
+        margin-left: 150px;
+        width: 120px;
+        height: 30px;
+        border: 1px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        
+
+    }
+
+    .exit:hover {
+      background-color: rgb(97, 97, 223);
+      transition: 0.5s;
+    }
+    input {
+        border: 1px solid black;
+        height: 40px;
+        width: 250px;
+        font-size: 20px;
+        border-radius: 5px;
+        padding-right: 20px;
+
+    }
+    header {
+      background: #0d1b2a;
+      color: #fff;
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    h1 {
+      color: white;
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00b4d8;
+    }
+
+
+</style>
+
+</html>
