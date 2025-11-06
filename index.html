@@ -1,23 +1,121 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ElectroMarket</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroMarket</title>
+</head>
 
-    body {
-      background: #f4f4f9;
-      color: #333;
-    }
+<body>
+    <header>
+    <h1>ElectroMarket</h1>
+    <nav>
+      <ul>
+        <li><a href="main.html">Главная</a></li>
+        <li><a href="#">Категории</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">О нас</a></li>
+      </ul>
+    </nav>
+  </header>
+    <div class="main">
+        <div class="reg">
 
-    header {
+        <h1>Регистрация</h1>
+        <label for="email" class="text">E-mail:</label>
+        <input type="email" placeholder="Введите e-mail">
+        <label for="number" class="text">Пароль</label>
+        <input type="password" placeholder="Введите пароль">
+        <button class="exit">Вход</button>
+        </div>
+    </div>
+    <footer>
+    © 2025 ElectroMarket. Все права защищены.
+  </footer>
+</body>
+<style>
+   body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-image: url(https://mfd-darfest.ru/wp-content/uploads/2024/08/213.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh;
+  margin-top: 80px;
+}
+
+
+.reg {
+  background-color: rgba(190, 184, 184, 0.2);
+  border-radius: 20px;
+  display: grid;
+  gap: 15px;
+  width: 90%;
+  max-width: 400px; 
+  padding: 30px 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+
+.reg h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem;
+}
+
+
+.text, label {
+  font-size: 1.1rem;
+  color: white;
+}
+
+
+input {
+  border: 1px solid black;
+  height: 40px;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 0 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #00b4d8;
+  box-shadow: 0 0 8px rgba(0, 180, 216, 0.4);
+}
+
+
+.exit {
+  margin-top: 10px;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #00b4d8;
+  color: white;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.exit:hover {
+  background-color: #0077b6;
+  transform: scale(1.03);
+}
+header {
       background: #0d1b2a;
       color: #fff;
       padding: 15px 50px;
@@ -49,136 +147,42 @@
     nav a:hover {
       color: #00b4d8;
     }
-
-    .hero {
-      background: url('https://i.pinimg.com/originals/44/9f/24/449f24b291083c4a3464dba9bb87424d.jpg') center/cover;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
-
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 50px;
-    }
-
-    .category {
-      background: white;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .category:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    .category img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .category h3 {
-      padding: 20px;
-      text-align: center;
-      font-size: 1.2rem;
-      color: #222;
-    }
-
     footer {
       background: #0d1b2a;
       color: #ccc;
       text-align: center;
       padding: 30px;
       font-size: 0.9rem;
-    }
+    } 
 
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        text-align: center;
-      }
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
 
-      nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
 
-      .hero {
-        font-size: 1.8rem;
-        padding: 20px;
-        text-align: center;
-      }
-     
-    }
-  </style>
-</head>
-<body>
+  .reg {
+    width: 95%;
+    padding: 20px 15px;
+  }
 
-  <header>
-    <h1>ElectroMarket</h1>
-    <nav>
-      <ul>
-        <li><a href="user.html">Регистрация</a></li>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Категории</a></li>
-        <li><a href="#">Контакты</a></li>
-        <li><a href="#">О нас</a></li>
-      </ul>
-    </nav>
-  </header>
+  .reg h1 {
+    font-size: 1.5rem;
+  }
 
-  <div class="hero">
-    Добро пожаловать в ElectroMarket ⚡
-  </div>
+  input, .exit {
+    font-size: 1rem;
+  }
+  
+}
 
-  <section class="categories">
-    <div class="category" onclick="openCategory('phones.html')">
-      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80" alt="Телефоны">
-      <h3>Смартфоны</h3>
-    </div>
+</style>
 
-    <div class="category" onclick="openCategory('laptops.html')">
-      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=900&q=80" alt="Ноутбуки">
-      <h3>Ноутбуки</h3>
-    </div>
-
-    <div class="category" onclick="openCategory('computers.html')">
-      <img src="https://region-tyumen.ru/upload/iblock/d1e/kizoy5hz0vt78q13w8cekcu2eo7v182f.jpeg" alt="ПК">
-      <h3>Компьютеры</h3>
-    </div>
-
-    <div class="category" onclick="openCategory('tv.html')">
-      <img src="https://tech-iq.ru/upload/iblock/cd1/9c5he5n3dct5rrw0dxlyveag7k2tkfga.jpg" alt="Телевизоры">
-      <h3>Телевизоры</h3>
-    </div>
-
-    <div class="category" onclick="openCategory('accessories.html')">
-      <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=900&q=80" alt="Аксессуары">
-      <h3>Аксессуары</h3>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 ElectroMarket. Все права защищены.
-  </footer>
-
-  <script>
-    function openCategory(page) {
-      window.location.href = page;
-    }
-  </script>
-
-</body>
 </html>
